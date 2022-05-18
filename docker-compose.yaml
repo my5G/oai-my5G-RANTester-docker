@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  my5grantester:
+    image: my5grantester:latest
+    container_name: my5grantester
+    privileged: true
+    command: ./app ue
+    volumes:
+      - ./config/tester.yaml:/workspace/my5G-RANTester/config/config.yml
+    cap_add:
+      - NET_ADMIN
+    networks:
+      public_net:
+          ipv4_address: 192.168.70.143
+      public_net_access:
+          ipv4_address: 192.168.72.143
+    healthcheck:
+      test: /bin/bash -c "ip addr | grep uetun1"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+networks:
+    public_net:
+        external:
+            name: demo-oai-public-net
+    public_net_access:
+        external:
+            name: oai-public-access
