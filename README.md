@@ -6,7 +6,7 @@ This repository contains the instructions to running OAI-CN in version v1.3.0 an
 ## Build the image 
 - git clone https://github.com/my5G/oai-my5G-RANTester-docker.git
 - cd oai-my5G-RANTester-docker
-- docker build -f nf_tester/Dockerfile --target my5grantester --tag my5grantester:latest .
+- docker build -f nf_tester/Dockerfile --tag my5grantester:latest .
 
 ## Execute the tester
 - docker-compose up -d 
