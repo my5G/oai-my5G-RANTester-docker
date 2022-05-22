@@ -8,11 +8,11 @@ gnodeb:
   plmnlist:
     mcc: "208"
     mnc: "95"
-    tac: "00a000"
+    tac: "000001"
     gnbid: "000003"
   slicesupportlist:
-    sst: "de"
-    sd: "00007b"
+    sst: "01"
+    sd: "000001"
   test: "test-normal-registration"
 ue:
   msin: "0000000043"
@@ -25,8 +25,8 @@ ue:
     mcc: "208"
     mnc: "95"
   snssai:
-    sst: 222
-    sd: "00007b"
+    sst: 1
+    sd: "000001"
   integrity:
     nia0: false
     nia1: false
