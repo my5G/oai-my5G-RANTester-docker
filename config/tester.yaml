@@ -39,4 +39,5 @@ ue:
 amfif:
   ip: "192.168.70.132"
   port: 38412
+  name: "oai"
 
